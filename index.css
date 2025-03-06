@@ -1,0 +1,265 @@
+@import url(style.css);
+.wrapper{
+    background-image: url(img/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.headerTxt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.headerH1{
+    font-size: 8em;
+    color: blue;
+}
+.headerH3{
+    font-size: 2em;
+    color: white;
+}
+.headerButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 1.3em;
+    transition: background-color 0.5s ease-in-out, transform 1s ease-in-out;
+}
+.headerButton:hover{
+    background-color: darkcyan;
+    transform: scale(1.2);
+    transition: background-color 0.5s ease-in-out, transform 1s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.intro, .regiments{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.intro > h1, .regiments > h1{
+    font-size: 5em;
+}
+.introSg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.introSg > p{
+    width: 50%;
+    margin-right: 6rem;
+}
+.introSg > hr{
+    margin: 0;
+    width: 2px;
+    align-self: stretch;
+}
+.introSg > img{
+    margin-left: 6rem;
+    width: 40%;
+    height: 40%;
+}
+.regimentList {
+    position: relative;
+    width: 100%;
+    max-height: 27rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* Create a wrapper for the slider */
+.sliderWrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Make sure the wrapper takes up the full width */
+    border-radius: 10px;
+}
+
+/* The actual slider */
+.slider {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease;
+    width: 100%; /* Ensure the slider takes up the full width */
+    border-radius: 10px;
+}
+
+/* Each slide will contain 2 items */
+.slide {
+    display: none; /* All slides are hidden by default */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease, opacity 1s ease;
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateX(10px); /* Make it slightly off-screen */
+    gap: 10px;
+    border-radius: 10px;
+}
+
+/* Add transition on show */
+.slide.show {
+    transform: translateX(0); 
+    opacity: 1;
+    transition: transform 2s ease-in-out, opacity 0.5s ease-in-out; /* Slide into place */
+}
+
+/* Style for each image and its content within the slide */
+.slide > a {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Each item takes 50% of the slide width */
+    height: 22rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.slide > a:hover{
+    background-color: darkcyan;
+    color: white;
+}
+/* Image styling */
+.slide > a > img {
+    width: 100%;
+    height: 90%;
+}
+
+/* Text area */
+.slide > a > .textDiv {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button styling */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+.regWrap{
+    margin-top: 5rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.regWrap > h1{
+    font-size: 2.5em;
+}
+.regWrap > h3{
+    font-size: 1.5em;
+}
+.regWrap > img{
+    margin-top: 15px;
+    margin-bottom: 30px !important;
+    width: 120vh;
+    height: 60vh;
+}
+.infowrap{
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+}
+.info{
+    width: 40%;
+}
+.progression{
+    width: 50%;
+    font-size: 1.5em;
+    margin-left: 50px;
+}
+.progression > h2{
+    font-size: 2em;
+}
+table{
+    width: 100% !important;
+    height: 100% !important;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border: solid black 1px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+tr{
+    width: 100%;
+}
+th{
+    background-color: beige;
+    border-top: none;
+    height: 3rem;
+    line-height: 3rem;
+    text-align:center
+}
+th > h2{
+    width: fit-content;
+    margin: auto auto;
+}
+td:first-child, th:first-child{
+    border-left: none;
+}
+.company{
+    height: 2rem;
+    background-color: rgb(163, 163, 127);
+}
+td{
+    height: 1rem;
+    padding: 10px;
+}
+tr td:first-child{
+    border-right: none;
+}
+tr td:last-child{
+    border-left: none;
+}
